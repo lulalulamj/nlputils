@@ -3,7 +3,7 @@ import re
 greek_symbol = re.compile(ur"[\u0391-\u03C9]", flags=re.U)
 roman_number = re.compile("^(?=[MDCLXVI])M*(C[MD]|D?C{0,3})(X[CL]|L?X{0,3})(I[XV]|V?I{0,3})$")
 common_scientific_measurements = {
-    "rad", "ohm", "j", "v", "w", "Hz", "F", "T", "H"
+    "rad", "ohm", "j", "v", "w", "hz", "f", "t", "h"
 }
 
 # kilo, mu, micro, nano, giga
@@ -27,7 +27,7 @@ def contains_roman_numeral(token):
 
 def is_common_measurement(token):
     """
-    Requires the tokenization not insert space at "/",
+    Requires the tokenizer not inserting spaces around "/",
     which should probably be the standard ...
     :param token:
     :return:
