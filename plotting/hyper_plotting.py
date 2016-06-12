@@ -2,7 +2,7 @@ from matplotlib import pyplot as plot
 from plotting_utils import generate_colors
 
 
-def plot_histogram(data_series, title=None, num_bins=None, labels =None, colors=None,
+def plot_histogram(data_series, title=None, num_bins=None, labels=None, colors=None,
                    histype="stepfilled", normed=False, gray_scale=False, stacked=False, plot_num=1):
     """
     Plot multiple histograms
@@ -24,8 +24,8 @@ def plot_histogram(data_series, title=None, num_bins=None, labels =None, colors=
 
     yd = len(data_series)
 
-    if (labels and len(labels)!= yd) or (num_bins and len(num_bins)!= yd)\
-            or (colors and len(colors)!= yd):
+    if (labels and len(labels) != yd) or (num_bins and len(num_bins) != yd) \
+            or (colors and len(colors) != yd):
         raise Exception("labels/bins/colors has different dimensions as data series")
 
     if not colors:
